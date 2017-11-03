@@ -1,0 +1,52 @@
+digraph {
+	subgraph StdTrans {
+		node [fixedsize=true shape=record width=1.5]
+		T1 [label=T1]
+	}
+	subgraph ClearTrans {
+		node [fixedsize=true shape=record width=1.5]
+		T3 [label="<f0> T3 |<f1> x |<f2> S2"]
+	}
+	subgraph TimeTrans {
+		node [fixedsize=true shape=record width=1.5]
+		T2 [label="<f0> T2 |<f1> t |<f2> - 30min"]
+	}
+	subgraph Places {
+		node [fixedsize=true shape=circle width=1.5]
+		S2 [label=S2]
+		S1 [label=S1]
+		S5 [label=S5]
+		S4 [label=S4]
+	}
+	subgraph StartPlaces {
+		node [fixedsize=true shape=doublecircle width=1.5]
+		S3 [label=S3]
+	}
+	subgraph InputPlaces {
+		node [fixedsize=true penwidth=0 shape=record]
+		E1 [label=E1]
+		E3 [label=E3]
+		E2 [label=E2]
+	}
+	subgraph OutputPlaces {
+		node [fixedsize=true penwidth=0 shape=record]
+		A1 [label=A1]
+		A2 [label=A2]
+	}
+	subgraph Edges {
+		S3 -> T1 [label="" arrowhead="" style=""]
+		E1 -> T1 [label="" arrowhead="" style=""]
+		T1 -> S2 [label="" arrowhead="" style=""]
+		S2 -> A2 [label="" arrowhead=none style=dotted]
+		S5 -> T1 [label="" arrowhead="" style=""]
+		S2 -> T2 [label="" arrowhead="" style=""]
+		E2 -> T2 [label="" arrowhead=odot style=""]
+		T2 -> S1 [label="" arrowhead="" style=""]
+		S1 -> A1 [label="" arrowhead=none style=dotted]
+		S1 -> T3 [label="" arrowhead="" style=""]
+		E3 -> T3 [label="" arrowhead="" style=""]
+		T3 -> S3 [label="" arrowhead="" style=""]
+		T3 -> S4 [label="" arrowhead="" style=""]
+		S4 -> S1 [label="" arrowhead="" style=""]
+	}
+}

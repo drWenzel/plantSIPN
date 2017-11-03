@@ -1,0 +1,25 @@
+digraph {
+	subgraph StdTrans {
+		node [fixedsize=true shape=record width=1.5]
+	}
+	subgraph ClearTrans {
+		node [fixedsize=true shape=record width=1.5]
+	}
+	subgraph TimeTrans {
+		node [fixedsize=true shape=record width=1.5]
+	}
+	subgraph Places {
+		node [fixedsize=true shape=circle width=1.5]
+	}
+	subgraph StartPlaces {
+		node [fixedsize=true shape=doublecircle width=1.5]
+	}
+	subgraph InputPlaces {
+		node [fixedsize=true penwidth=0 shape=record]
+	}
+	subgraph OutputPlaces {
+		node [fixedsize=true penwidth=0 shape=record]
+	}
+	subgraph Edges {
+	}
+}

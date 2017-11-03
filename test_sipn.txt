@@ -1,0 +1,41 @@
+@sipnNetwork:start / myNetwork
+
+stelle: S1
+stelle: S2
+startstelle: S3
+stelle: S4
+stelle: S5
+
+transition: T1
+timertransition: T2 / 30 min
+loeschtransition: T3 / S2
+
+ausgang: A1
+ausgang: A2
+
+eingang: E1
+eingang: E2
+eingang: E3
+
+S3 -> T1
+E1 -> T1
+
+T1 -> S2
+S2 .. A2
+S5 -> T1
+S2 -> T2
+E2 -O T2
+
+T2 -> S1
+S1 .. A1
+
+S1 -> T3
+E3 -> T3
+
+T3 -> S3
+
+T3 -> S4
+
+S4 -> S1
+
+@sipnNetwork:end
