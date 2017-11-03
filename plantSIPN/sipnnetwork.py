@@ -190,14 +190,17 @@ class sipnNetwork:
 
 
     def buildSubGraphs(self):
+        self.sipnGraph.subgraph(self.startPlaces.getAndCreateSubGraph())
+        self.sipnGraph.subgraph(self.input.getAndCreateSubGraph())
+        self.sipnGraph.subgraph(self.places.getAndCreateSubGraph())
+        self.sipnGraph.subgraph(self.output.getAndCreateSubGraph())
+
         self.sipnGraph.subgraph(self.stdTransition.getAndCreateSubGraph())
         self.sipnGraph.subgraph(self.clearTransitions.getAndCreateSubGraph())
         self.sipnGraph.subgraph(self.timeTransition.getAndCreateSubGraph())
-        self.sipnGraph.subgraph(self.places.getAndCreateSubGraph())
-        self.sipnGraph.subgraph(self.startPlaces.getAndCreateSubGraph())
-        self.sipnGraph.subgraph(self.input.getAndCreateSubGraph())
-        self.sipnGraph.subgraph(self.output.getAndCreateSubGraph())
+
         self.sipnGraph.subgraph(self.edges.getAndCreateSubGraph())
+
 
     def setExportTypeToSvg(self):
         self.sipnGraph = gv.Digraph(format='svg')
