@@ -35,4 +35,4 @@ Erstellung einer SIPN-Berschreibung gem. Vorlage
     createSipn ausführen
 
 ## Feedback / Anregungen / Anpassungen
-Bitte Feedback an andre.wenzel@haw-hamburg.de
+Bitte Feedback via github
